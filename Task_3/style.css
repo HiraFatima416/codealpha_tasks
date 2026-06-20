@@ -1,0 +1,86 @@
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+/* Header & Filters */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.filter-buttons {
+    margin-top: 15px;
+}
+.btn {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.btn.active, .btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* Responsive Grid Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.gallery-item:hover img {
+    transform: scale(1.05); /* Smooth zoom effect */
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none; /* Hidden initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 4px;
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
